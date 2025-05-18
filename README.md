@@ -74,6 +74,10 @@ If you are using other renderers, such as [hexo-renderer-marked](https://github.
 +\\\\
 ```
 
+Update 18/05/2025: Changed register to `before_post_render`, so this plugin will transform formulas before markdown renderer. This mitigates the potential conflicts in escaping `_` and `%`.
+
+Hint: If you want to display multiline formulas, warp them into `\displaylines{}`. Refer to [Mathjax#2312](https://github.com/mathjax/MathJax/issues/2312#issuecomment-2440036455)
+
 ## Sample
 
 Write the following LaTeX code:

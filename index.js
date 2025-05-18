@@ -14,7 +14,7 @@ const config = hexo.config.mathjax = Object.assign({
 
 const mathjax = require('./lib/filter')(config);
 
-hexo.extend.filter.register('after_post_render', data => {
+hexo.extend.filter.register('before_post_render', data => {
   if (!data.mathjax && !config.every_page) return;
 
   data.content = mathjax(data.content);
